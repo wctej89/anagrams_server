@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Welcome to Anagrams!</h1>
+  <div id="wordsdiv">
+    <% if @results != nil %>
+      <% @results.each do |word| %>
+        <p><%= word.term %></p>
+      <%end%>
+    <% end %>
+  </div>
+  <section id="add">  
+  <form action="/" method="post">  
+    <input type="text" name="term" placeholder="Type word here&hellip;"></input>  
+    <input type="submit" value="Find Anagram(s)">  
+  </form>  
+</section>
+</div>
